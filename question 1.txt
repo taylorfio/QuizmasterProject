@@ -1,0 +1,118 @@
+    #question 1 - Prehistoric fish
+
+    #level one
+    # 1 correct
+which of these is the largest fish in recorded history
+1-Leedsichthys
+2-Megalodon
+3-Basilosaurus
+4-Klaus
+
+    #level two
+    # 2 correct
+which of these ancient fish is still alive today
+1-Materpiscis
+2-Coelacanth
+3-Perleidus
+4-Holoptychius
+
+    #level three
+    # 3 correct
+what did Prehistoric fish eat
+1-kentucky fried chicken
+2-water
+3-worm-like creatures and molluscs
+4-air
+
+    #question 2 - cheese
+
+    #level one
+    # 1 correct
+which of these cheeses contains mold to add to its flavoring
+1-cheddar cheese
+2-blue cheese
+3-mozzarella
+4-brie cheese
+
+    #level two
+    # 2 correct
+which of these cheeses starts with C
+1-blue cheese
+2-mozzarella
+3-cheddar
+4-brie cheese
+
+    #level three
+    # 3 correct
+which of these is good on pizza
+1-cheddar cheese
+2-blue cheese
+3-mozzarella
+4-brie cheese
+
+    #question 3 - types of lightbulbs
+
+    #level one
+    # 1 correct
+which of these light sources uses combustion
+1-oil lamp
+2-LED lamp
+3-incandescent light bulb
+4-fluorescent light bulbs
+
+    #level two
+    # 2 correct
+which of these sources of light is most efficent
+1-oil lamp
+2-LED lamp
+3-incandescent light bulb
+4-fluorescent light bulbs
+
+    #level three
+    # 3 correct
+which of these creates light by passing an electric current through a wire
+1-oil lamp
+2-LED lamp
+3-incandescent light bulb
+4-fluorescent light bulbs
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    #mystery
+
+    # 1 correct
+what is the capital of Arstotzka
+1-East Grestin
+2-Paradizna
+3-Republia
+4-Ottawa
+
+    # 2 correct
+which of these is a human name
+1-snail
+2-Greg
+3-Giant sequoia
+4-Cthulhu
+
+    # 3 correct
+which isn't a harry potter book
+1-Harry Potter And The Philosopher's Stone
+2-Harry Potter And The Chamber Of Secrets
+3-Harry Potter And The Giant Peach
+4-Harry Potter And The Prisoner Of Azkaban
+
