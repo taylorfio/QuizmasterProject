@@ -41,54 +41,8 @@ while restart == 1:
     print("The higher the level the harder it is but increases the amount of points you gain ")
     print("level 1 = 100, level 2 = 200, level 3 = 300")
     print("")
-# category, level
-
-    def level_check(level_holder, category_holder):
-        if category_holder == 1:
-            if level_holder in fish_list:
-                print("you already chose this")
-                level_choice()
-        if category_holder == 2:
-            if level_holder in cheese_list:
-                print("you already chose this")
-                level_choice()
-        if category_holder == 3:
-            if level_holder in lightbulbs_list:
-                print("you already chose this")
-                level_choice()
-        #else:
-            #break
 
     def level_choice():
-        level_input = input("select a level 1, 2, 3")
-        if level_input.isdigit():
-            level_input = int(level_input)
-        while level_input != 1 and level_input != 2 and level_input != 3:
-            print("error use the numbers")
-            level_input = input("select a level 1, 2, 3")
-            if level_input.isdigit():
-                level_input = int(level_input)
-
-
-        if level_input == 1:
-            level_check(level_input, categories_input)
-            if level_check == True:
-                return 1
-            elif level_check == False:
-                print("you already chose this")
-
-
-
-
-        if level_input == 2:
-            level_check(level_input, 2)
-            return 2
-        if level_input == 3:
-            level_check(level_input, 3)
-            return 3
-
-    def question_choice():
-        global score
         print(name, "what category do you choose")
         print("Categories include:")
         print("                    1_ prehistoric fish")
@@ -103,6 +57,49 @@ while restart == 1:
             categories_input = input("1, 2, 3  ")
             if categories_input.isdigit():
                 categories_input = int(categories_input)
+
+        level_input = input("select a level 1, 2, 3")
+        if level_input.isdigit():
+            level_input = int(level_input)
+        while level_input != 1 and level_input != 2 and level_input != 3:
+            print("error use the numbers")
+            level_input = input("select a level 1, 2, 3")
+            if level_input.isdigit():
+                level_input = int(level_input)
+
+        if categories_input == 1:
+            if level_input in fish_list:
+                b = False
+            else:
+                return True
+        if categories_input == 2:
+            if level_input in cheese_list:
+                b = False
+            else:
+                return True
+        if categories_input == 3:
+            if level_input in lightbulbs_list:
+                b = False
+            else:
+                b = True
+
+        if b == True:
+            return categories_input and level_input  # need the function to bring these values into next function
+        elif b == False:
+            print("you already chose this")
+            level_choice()
+
+
+    def question_choice():
+        global score
+
+
+
+
+        level_choice()  # need to bring over categories_input and level_input values and make repeatable
+
+
+
 
         if categories_input == 1:
             print("                     __    _      __             _         _____      __")
@@ -336,7 +333,6 @@ while restart == 1:
         print("you have answered all the questions")
 
         # save score here
-
 
         ending = input("do you want to restart: yes or no  ")  # code to restart the entire game
         while ending != "no" and ending != "yes":  # defencive coding
