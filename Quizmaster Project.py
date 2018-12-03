@@ -1,10 +1,8 @@
 import time
-import os
 
 fish_list = []
 cheese_list = []
 lightbulbs_list = []
-score_num = 0
 score = 0
 
 restart = 1
@@ -84,7 +82,7 @@ while restart == 1:
                 b = True
 
         if b == True:
-            return categories_input and level_input  # need the function to bring these values into next function
+            return [categories_input, level_input]  # need the function to bring these values into next function
         elif b == False:
             print("you already chose this")
             level_choice()
@@ -92,14 +90,11 @@ while restart == 1:
 
     def question_choice():
         global score
-
-
-
-
-        level_choice()  # need to bring over categories_input and level_input values and make repeatable
-
-
-
+        global score_num
+        answer = 0
+        a = level_choice()
+        categories_input = a[0]
+        level_input = a[1]
 
         if categories_input == 1:
             print("                     __    _      __             _         _____      __")
@@ -147,175 +142,136 @@ while restart == 1:
             print("")
             print("you chose category three - types of light bulbs")
 
-        a = level_choice()
-        if a == 1:
+        if level_input == 1:
             if categories_input == 1:
-                if 1 in fish_list:
-                    while 1 in fish_list:
-                        level_choice()
-                elif 1 not in fish_list:
-                    answer = 1
-                    fish_list.append(1)
-                    score_num = 100
-                    try:
-                        question1 = open("question 1.txt", "r")
-                        temp = question1.readlines()
-                        print(temp[4])
-                        print(temp[5])
-                        print(temp[6])
-                        print(temp[7])
-                        print(temp[8])
-                    except:
-                        print("ERROR")
+                answer = 1
+                fish_list.append(1)
+                score_num = 100
+                try:
+                    question1 = open("question 1.txt", "r")
+                    line = question1.readlines()
+                    print(line[4])
+                    print(line[5])
+                    print(line[6])
+                    print(line[7])
+                    print(line[8])
+                except:
+                    print("ERROR")
             elif categories_input == 2:
-                if 1 in cheese_list:
-                    while 1 in cheese_list:
-                        level_choice()
-
-                elif 1 not in cheese_list:
-                    answer = 1
-                    cheese_list.append(1)
-                    score_num = 100
-                    try:
-                        question1 = open("question 1.txt", "r")
-                        temp = question1.readlines()
-                        print(temp[30])
-                        print(temp[31])
-                        print(temp[32])
-                        print(temp[33])
-                        print(temp[34])
-                    except:
-                        print("ERROR")
+                answer = 1
+                cheese_list.append(1)
+                score_num = 100
+                try:
+                    question1 = open("question 1.txt", "r")
+                    line = question1.readlines()
+                    print(line[30])
+                    print(line[31])
+                    print(line[32])
+                    print(line[33])
+                    print(line[34])
+                except:
+                    print("ERROR")
             elif categories_input == 3:
-                if 1 in lightbulbs_list:
-                    while 1 in lightbulbs_list:
-                        level_choice()
+                answer = 1
+                lightbulbs_list.append(1)
+                score_num = 100
+                try:
+                    question1 = open("question 1.txt", "r")
+                    line = question1.readlines()
+                    print(line[56])
+                    print(line[57])
+                    print(line[58])
+                    print(line[59])
+                    print(line[60])
+                except:
+                    print("ERROR")
 
-                elif 1 not in lightbulbs_list:
-                    answer = 1
-                    lightbulbs_list.append(1)
-                    score_num = 100
-                    try:
-                        question1 = open("question 1.txt", "r")
-                        temp = question1.readlines()
-                        print(temp[56])
-                        print(temp[57])
-                        print(temp[58])
-                        print(temp[59])
-                        print(temp[60])
-                    except:
-                        print("ERROR")
-
-        if a == 2:
+        if level_input == 2:
             if categories_input == 1:
-                if 2 in fish_list:
-                    while 1 in fish_list:
-                        level_choice()
-                if 2 not in fish_list:
-                    answer = 2
-                    fish_list.append(2)
-                    score_num = 200
-                    try:
-                        question1 = open("question 1.txt", "r")
-                        temp = question1.readlines()
-                        print(temp[12])
-                        print(temp[13])
-                        print(temp[14])
-                        print(temp[15])
-                        print(temp[16])
-                    except:
-                        print("ERROR")
+                answer = 2
+                fish_list.append(2)
+                score_num = 200
+                try:
+                    question1 = open("question 1.txt", "r")
+                    line = question1.readlines()
+                    print(line[12])
+                    print(line[13])
+                    print(line[14])
+                    print(line[15])
+                    print(line[16])
+                except:
+                    print("ERROR")
             if categories_input == 2:
-                if 2 in cheese_list:
-                    while 1 in cheese_list:
-                        level_choice()
-                if 2 not in cheese_list:
-                    answer = 2
-                    cheese_list.append(2)
-                    score_num = 200
-                    try:
-                        question1 = open("question 1.txt", "r")
-                        temp = question1.readlines()
-                        print(temp[38])
-                        print(temp[39])
-                        print(temp[40])
-                        print(temp[41])
-                        print(temp[42])
-                    except:
-                        print("ERROR")
+                answer = 2
+                cheese_list.append(2)
+                score_num = 200
+                try:
+                    question1 = open("question 1.txt", "r")
+                    line = question1.readlines()
+                    print(line[38])
+                    print(line[39])
+                    print(line[40])
+                    print(line[41])
+                    print(line[42])
+                except:
+                    print("ERROR")
             if categories_input == 3:
-                if 2 in lightbulbs_list:
-                    while 1 in lightbulbs_list:
-                        level_choice()
-                if 2 not in lightbulbs_list:
-                    answer = 2
-                    lightbulbs_list.append(2)
-                    score_num = 200
-                    try:
-                        question1 = open("question 1.txt", "r")
-                        temp = question1.readlines()
-                        print(temp[64])
-                        print(temp[65])
-                        print(temp[66])
-                        print(temp[67])
-                        print(temp[68])
-                    except:
-                        print("ERROR")
-        if a == 3:
+                answer = 2
+                lightbulbs_list.append(2)
+                score_num = 200
+                try:
+                    question1 = open("question 1.txt", "r")
+                    line = question1.readlines()
+                    print(line[64])
+                    print(line[65])
+                    print(line[66])
+                    print(line[67])
+                    print(line[68])
+                except:
+                    print("ERROR")
+        if level_input == 3:
             if categories_input == 1:
-                if 3 in fish_list:
-                    while 3 in fish_list:
-                        level_choice()
-                if 3 not in fish_list:
-                    answer = 3
-                    fish_list.append(3)
-                    score_num = 300
-                    try:
-                        question1 = open("question 1.txt", "r")
-                        temp = question1.readlines()
-                        print(temp[20])
-                        print(temp[21])
-                        print(temp[22])
-                        print(temp[23])
-                        print(temp[24])
-                    except:
-                        print("ERROR")
+                answer = 3
+                fish_list.append(3)
+                score_num = 300
+                try:
+                    question1 = open("question 1.txt", "r")
+                    line = question1.readlines()
+                    print(line[20])
+                    print(line[21])
+                    print(line[22])
+                    print(line[23])
+                    print(line[24])
+                except:
+                    print("ERROR")
             if categories_input == 2:
-                if 3 in cheese_list:
-                    while 3 in cheese_list:
-                        level_choice()
-                if 3 not in cheese_list:
-                    answer = 3
-                    cheese_list.append(3)
-                    score_num = 300
-                    try:
-                        question1 = open("question 1.txt", "r")
-                        temp = question1.readlines()
-                        print(temp[46])
-                        print(temp[47])
-                        print(temp[48])
-                        print(temp[49])
-                        print(temp[50])
-                    except:
-                        print("ERROR")
+                answer = 3
+                cheese_list.append(3)
+                score_num = 300
+                try:
+                    question1 = open("question 1.txt", "r")
+                    line = question1.readlines()
+                    print(line[46])
+                    print(line[47])
+                    print(line[48])
+                    print(line[49])
+                    print(line[50])
+                except:
+                    print("ERROR")
             if categories_input == 3:
-                if 3 in lightbulbs_list:
-                    while 3 in lightbulbs_list:
-                        level_choice()
-                if 3 not in lightbulbs_list:
-                    answer = 3
-                    lightbulbs_list.append(3)
-                    score_num = 300
-                    try:
-                        question1 = open("question 1.txt", "r")
-                        temp = question1.readlines()
-                        print(temp[72])
-                        print(temp[73])
-                        print(temp[74])
-                        print(temp[75])
-                        print(temp[76])
-                    except:
-                        print("ERROR")
+                answer = 3
+                lightbulbs_list.append(3)
+                score_num = 300
+                try:
+                    question1 = open("question 1.txt", "r")
+                    line = question1.readlines()
+                    print(line[72])
+                    print(line[73])
+                    print(line[74])
+                    print(line[75])
+                    print(line[76])
+                except:
+                    print("ERROR")
 
         question_answer = int(input("1, 2, 3 or 4"))
         while question_answer != 1 and question_answer != 2 and question_answer != 3 and question_answer != 4:  # defencive coding
@@ -327,12 +283,26 @@ while restart == 1:
         elif question_answer != answer:
             print("incorrect! your score is ", score)
 
+
     while len(fish_list) != 3 and len(cheese_list) != 3 and len(lightbulbs_list) != 3:
         question_choice()
     else:
         print("you have answered all the questions")
-
-        # save score here
+        print(name, " your score is ", score)
+        highscoreinput = input("would you like to save your score?  yes or no")
+        while highscoreinput != "no" and highscoreinput != "yes":  # defencive coding
+            print("error")
+            highscoreinput = input("would you like to save your score?  yes or no")
+        if highscoreinput == "no":
+            break
+        elif highscoreinput == "yes":
+            try:
+                f = open("savefile.txt", "a")
+                f.append(name, ", ", score)
+            except:
+                print("ERROR")
+            else:
+                print("Success")
 
         ending = input("do you want to restart: yes or no  ")  # code to restart the entire game
         while ending != "no" and ending != "yes":  # defencive coding
@@ -342,6 +312,5 @@ while restart == 1:
             restart = restart + 1
         elif ending == "yes":
             restart = restart + 0
-
 
 
