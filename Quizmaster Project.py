@@ -6,13 +6,13 @@ that finds the corresponding answer and score value and the question to print. w
 the game ends and asks you if you want to save your score were your name is added to savefile.txt. then the program 
 sks if you want to restart or finish.'''
 
-
-fish_list = []
-cheese_list = []  # stating the lists and variables at the beginning of the program
-lightbulbs_list = []
-score = 0
 restart = 1
 while restart == 1:  # puts the program in a while loop that continues until told to stop
+    fish_list = []
+    cheese_list = []  # stating the lists and variables at the beginning of the program
+    lightbulbs_list = []
+    score = 0
+
     print("")
     print(",--.   ,--.       ,--.                                    ,--.      ")
     time.sleep(0.1)
@@ -75,12 +75,12 @@ while restart == 1:  # puts the program in a while loop that continues until tol
             if level_input in fish_list:  # checks if the category and level had already been selected
                 b = False
             else:
-                return True
+                b = True
         if categories_input == 2:
             if level_input in cheese_list:
                 b = False
             else:
-                return True
+                b = True
         if categories_input == 3:
             if level_input in lightbulbs_list:
                 b = False
@@ -91,7 +91,7 @@ while restart == 1:  # puts the program in a while loop that continues until tol
             return [categories_input, level_input]  # if it hasn't it returns the category and level input
         elif b == False:
             print("you already chose this")  # if it has been chosen it repeats
-            level_choice()
+            return level_choice()
 # TypeError: 'bool' object is not subscriptable
 
     def question_choice():
@@ -290,31 +290,31 @@ while restart == 1:  # puts the program in a while loop that continues until tol
             print("incorrect! your score is ", score)  # tells you your score
 
 
-    while len(fish_list) != 3 and len(cheese_list) != 3 and len(lightbulbs_list) != 3:
+    while len(fish_list) < 3 or len(cheese_list) < 3 or len(lightbulbs_list) < 3:
         question_choice()  # repeats the function until all questions are answered
-    else:
-        print("you have answered all the questions")
-        print(name, " your score is ", score)
-        highscoreinput = input("would you like to save your score?  yes or no")  # option to save score
-        while highscoreinput != "no" and highscoreinput != "yes":  # defencive coding
-            print("error")
-            highscoreinput = input("would you like to save your score?  yes or no")
-        if highscoreinput == "no":
-            break
-        elif highscoreinput == "yes":
-            try:
-                f = open("savefile.txt", "a")  # appends your name and score to savefile.txt
-                f.append(name, ", ", score)
-            except:
-                print("ERROR")
-            else:
-                print("Success")  # tells you it was completed
 
-        ending = input("do you want to restart: yes or no  ")  # code to restart the entire game
-        while ending != "no" and ending != "yes":  # defencive coding
-            print("error")
-            ending = input("do you want to restart: yes or no  ")
-        if ending == "no":
-            restart = restart + 1
-        elif ending == "yes":
-            restart = restart + 0
+    print("you have answered all the questions")
+    print(name, " your score is ", score)
+    highscoreinput = input("would you like to save your score?  yes or no")  # option to save score
+    while highscoreinput != "no" and highscoreinput != "yes":  # defencive coding
+        print("error")
+        highscoreinput = input("would you like to save your score?  yes or no")
+    if highscoreinput == "no":
+        break
+    elif highscoreinput == "yes":
+        try:
+            f = open("savefile.txt", "a")  # appends your name and score to savefile.txt
+            f.write("\n" + str(name) + ", " + str(score))
+        except:
+            print("ERROR")
+        else:
+            print("Success")  # tells you it was completed
+
+    ending = input("do you want to restart: yes or no  ")  # code to restart the entire game
+    while ending != "no" and ending != "yes":  # defencive coding
+        print("error")
+        ending = input("do you want to restart: yes or no  ")
+    if ending == "no":
+        restart = restart + 1
+    elif ending == "yes":
+        restart = restart + 0
