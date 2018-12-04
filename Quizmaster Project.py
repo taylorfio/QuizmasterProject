@@ -82,15 +82,15 @@ while restart == 1:
                 b = True
 
         if b == True:
-            return [categories_input, level_input]  # need the function to bring these values into next function
+            return [categories_input, level_input]
         elif b == False:
             print("you already chose this")
             level_choice()
-
+                                       # TypeError: 'bool' object is not subscriptable
 
     def question_choice():
         global score
-        global score_num
+        score_num = 0
         answer = 0
         a = level_choice()
         categories_input = a[0]
@@ -312,5 +312,3 @@ while restart == 1:
             restart = restart + 1
         elif ending == "yes":
             restart = restart + 0
-
-
