@@ -305,6 +305,7 @@ while restart == 1:  # puts the program in a while loop that continues until tol
         try:
             f = open("savefile.txt", "a")  # appends your name and score to savefile.txt
             f.write("\n" + str(name) + ", " + str(score))
+            f.close()
         except:
             print("ERROR")
         else:
