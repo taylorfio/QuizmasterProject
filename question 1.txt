@@ -29,8 +29,8 @@ what did Prehistoric fish eat
     #level one
     # 1 correct
 which of these cheeses contains mold to add to its flavoring
-1-cheddar cheese
-2-blue cheese
+1-blue cheese
+2-cheddar cheese
 3-mozzarella
 4-brie cheese
 
@@ -38,8 +38,8 @@ which of these cheeses contains mold to add to its flavoring
     # 2 correct
 which of these cheeses starts with C
 1-blue cheese
-2-mozzarella
-3-cheddar
+2-cheddar
+3-mozzarella
 4-brie cheese
 
     #level three

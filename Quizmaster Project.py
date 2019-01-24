@@ -150,7 +150,7 @@ while restart == 1:  # puts the program in a while loop that continues until tol
 
         if level_input == 1:  # filters the questions based on there level then category
             if categories_input == 1:
-                answer = 1
+                answer = "1"
                 fish_list.append(1)  # states the corresponding answer and score value for the question
                 score_num = 100
                 try:
@@ -164,7 +164,7 @@ while restart == 1:  # puts the program in a while loop that continues until tol
                 except:
                     print("ERROR")
             elif categories_input == 2:
-                answer = 1
+                answer = "1"
                 cheese_list.append(1)
                 score_num = 100
                 try:
@@ -178,7 +178,7 @@ while restart == 1:  # puts the program in a while loop that continues until tol
                 except:
                     print("ERROR")
             elif categories_input == 3:
-                answer = 1
+                answer = "1"
                 lightbulbs_list.append(1)
                 score_num = 100
                 try:
@@ -194,7 +194,7 @@ while restart == 1:  # puts the program in a while loop that continues until tol
 
         elif level_input == 2:
             if categories_input == 1:
-                answer = 2
+                answer = "2"
                 fish_list.append(2)
                 score_num = 200
                 try:
@@ -208,7 +208,7 @@ while restart == 1:  # puts the program in a while loop that continues until tol
                 except:
                     print("ERROR")
             elif categories_input == 2:
-                answer = 2
+                answer = "2"
                 cheese_list.append(2)
                 score_num = 200
                 try:
@@ -222,7 +222,7 @@ while restart == 1:  # puts the program in a while loop that continues until tol
                 except:
                     print("ERROR")
             elif categories_input == 3:
-                answer = 2
+                answer = "2"
                 lightbulbs_list.append(2)
                 score_num = 200
                 try:
@@ -237,7 +237,7 @@ while restart == 1:  # puts the program in a while loop that continues until tol
                     print("ERROR")
         elif level_input == 3:
             if categories_input == 1:
-                answer = 3
+                answer = "3"
                 fish_list.append(3)
                 score_num = 300
                 try:
@@ -251,7 +251,7 @@ while restart == 1:  # puts the program in a while loop that continues until tol
                 except:
                     print("ERROR")
             elif categories_input == 2:
-                answer = 3
+                answer = "3"
                 cheese_list.append(3)
                 score_num = 300
                 try:
@@ -265,7 +265,7 @@ while restart == 1:  # puts the program in a while loop that continues until tol
                 except:
                     print("ERROR")
             elif categories_input == 3:
-                answer = 3
+                answer = "3"
                 lightbulbs_list.append(3)
                 score_num = 300
                 try:
@@ -279,8 +279,8 @@ while restart == 1:  # puts the program in a while loop that continues until tol
                 except:
                     print("ERROR")
 
-        question_answer = int(input("1, 2, 3 or 4"))  # input for your answer
-        while question_answer != 1 and question_answer != 2 and question_answer != 3 and question_answer != 4:  # defencive coding
+        question_answer = input("1, 2, 3 or 4")  # input for your answer
+        while question_answer != "1" and question_answer != "2" and question_answer != "3" and question_answer != "4":  # defencive coding
             print("error")
             question_answer = input("1, 2, 3 or 4")
         if question_answer == answer:  # option if correct

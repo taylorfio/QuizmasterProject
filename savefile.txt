@@ -1,2 +1,4 @@
 1, 1800
 2, 1700
+taylor fiorelli, 1800
+Susan, 1300
